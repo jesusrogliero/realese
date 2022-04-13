@@ -1,0 +1,47 @@
+{
+  "name": "inventario_maquinaria",
+  "version": "1.0.0",
+  "description": "Sistema que gestiona las maquinarias y sus componentes",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/jesmirou/inventario_maquinaria.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Jesus Rogliero",
+  "license": "ISC",
+  "build": {
+    "appId": "machinery_inventory",
+    "productName": "Inventario de Maquinaria",
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32",
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^13.4.0",
+    "electron-builder": "^22.13.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.26.0"
+  },
+  "dependencies": {
+    "appdata-path": "^1.0.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-log": "^4.4.1",
+    "electron-updater": "^4.6.5",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2"
+  }
+}
